@@ -12,6 +12,15 @@ public class CarDaoImp implements CarDAO {
 
     private List<Car> cars;
 
+    {
+        cars = new ArrayList<>();
+        cars.add(new Car(1, "mers", 123));
+        cars.add(new Car(2, "bmw", 7));
+        cars.add(new Car(3, "volvo", 90));
+        cars.add(new Car(4, "lada", 15));
+        cars.add(new Car(5, "volga", 2110));
+    }
+
     @Override
     public List<Car> getcarList(int param) {
         if (param < 5) {
@@ -21,14 +30,7 @@ public class CarDaoImp implements CarDAO {
     }
 
     @Override
-    public List<Car> carList(){
-        cars = new ArrayList<>();
-        cars.add(new Car(1, "mers", 123));
-        cars.add(new Car(2, "bmw", 7));
-        cars.add(new Car(3, "volvo", 90));
-        cars.add(new Car(4, "lada", 15));
-        cars.add(new Car(5, "volga", 2110));
-
+    public List<Car> carList() {
         return cars;
     }
 
